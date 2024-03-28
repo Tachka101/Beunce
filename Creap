@@ -1,0 +1,6 @@
+def calculate_total(first_number, second_number, operation=(lambda x, y: x + y)):
+    total = operation(first_number, second_number)
+    print(f"{first_number} {operation.__name__} {second_number} = {total}")
+
+calculate_total(2, 3)  # Выведет "2 + 3 = 5"
+calculate_total(2, 3, operator.mul)  # Выведет "2 * 3 = 6"
